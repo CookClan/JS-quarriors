@@ -34,4 +34,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # run tests!
-      - run: npm test -- --single-run --no-progress
+      - run: npm test -- --single-run --no-progress --reporters junit
+
+      - store_test_results:
+        path: testResults
