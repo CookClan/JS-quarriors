@@ -37,4 +37,4 @@ jobs:
       - run: npm test -- --single-run --no-progress --reporters junit
 
       - store_test_results:
-        path: testResults
+          path: testResults
