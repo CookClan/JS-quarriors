@@ -7,7 +7,7 @@ import { Class } from '../shared/models/class';
 @Component({
   selector: 'app-dice-side',
   templateUrl: './dice-side.component.html',
-  styleUrls: ['./dice-side.component.css']
+  styleUrls: ['./dice-side.component.scss']
 })
 export class DiceSideComponent implements OnInit {
 private side: DiceSide = new DiceSide();
@@ -38,6 +38,9 @@ constructor(private sanitizer: DomSanitizer) {
     return this.sanitizer.bypassSecurityTrustHtml(`<svg style="fill: currentColor;" viewBox="0 0 100 100"> \
       ${svg}\
       </svg>`);
+  }
+  get bursts() {
+    return Array(this.side.burst + 1).join('*');
   }
   ngOnInit() {
   }
