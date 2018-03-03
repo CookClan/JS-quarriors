@@ -1,24 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 
-import { AppComponent } from './app.component';
+import { QuarriorsComponent } from './quarriors.component';
 
-const appRoutes: Routes = [
-  { path: 'quarriors', component: QuarriorsComponent }
-];
 
 @NgModule({
   declarations: [
-    AppComponent
+    QuarriorsComponent
   ],
   imports: [
-    RouterModule.forRoot(
-      appRoutes),
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [QuarriorsComponent]
 })
-export class AppModule { }
+export class QuarriorsModule { }
 
