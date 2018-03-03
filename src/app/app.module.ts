@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { DiceSideComponent } from './dice-side/dice-side.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DiceSideComponent
   ],
   imports: [
     BrowserModule
