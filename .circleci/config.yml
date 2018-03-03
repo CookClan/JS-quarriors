@@ -32,9 +32,12 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
+      - run: npm run lint
       # run tests!
       - run: npm test -- --single-run --no-progress --reporters junit
 
       - store_test_results:
           path: testResults
+      - store_artifacts:
+          path: testResults
+          prefix: tests
