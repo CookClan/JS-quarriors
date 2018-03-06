@@ -7,8 +7,7 @@ import { Spell } from './spell';
 export class Player {
     private glory: number;
     private bag: Type[];
-    private creatures: Creature[];
-    private spells: Spell[];
-    private spent: Type[];
-    private used: Type[];
+    private ready: Rolled[]; //will be the result of the side rolled, and the type the die is bound to
+    private spent: Rolled[];
+    private used: Rolled[]; //we don't turn into types again till we get bagged
 }
