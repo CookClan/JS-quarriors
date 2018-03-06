@@ -18,7 +18,7 @@ export class Class {
         if (value.length !== 6) {
             throw new error('dice must have six and only six sides');
         }
-        this.intDiceSides = value;
+        this.intDiceSides = value.slice();
     }
     AddType(value: Type): void {
         value.class = this;
