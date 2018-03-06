@@ -8,4 +8,5 @@ export class Type {
     description: string;
     cost: number;
     glory: number;
+    bursts: any[]; //will hold ability information
 }
