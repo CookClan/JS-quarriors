@@ -5,7 +5,7 @@ import { Spell } from './spell';
  * Holds the data about a Summoned creature
 */
 export class Creature {
-    private spells: Spell[];
+    private spells: Spell[]; //might be better to have this be it's own class like attachment or enhancement
     public constructor(private type: Type, private side: number) {}
     public diceSide(): DiceSide {
         return this.type.class.diceSides[this.side]; // determines what is displayed
