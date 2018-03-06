@@ -9,5 +9,6 @@ export class DiceSide {
     public attack: number;
     public defense: number;
     public burst: number;
-    public icon: Icon;
+    public icon: Icon[];
+    public areIconsDivided: boolean;
 }
