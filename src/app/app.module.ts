@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { DiceSideComponent } from './dice-side/dice-side.component';
+import { DieSideComponent } from './die-side/die-side.component';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DiceSideComponent
+    DieSideComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule
