@@ -1,5 +1,5 @@
 import { Type } from './type';
-import { DiceSide } from './dice-side';
+import { DieSide } from './die-side';
 import { Spell } from './spell';
 /**
  * Holds the data about a Summoned creature
@@ -7,8 +7,8 @@ import { Spell } from './spell';
 export class Creature {
     private spells: Spell[];
     public constructor(private type: Type, private side: number) {}
-    public diceSide(): DiceSide {
-        return this.type.class.diceSides[this.side]; // determines what is displayed
+    public diceSide(): DieSide {
+        return this.type.die.sides[this.side]; // determines what is displayed
     }
     public get attack(): number {
         return this.diceSide().attack; // will be extended
