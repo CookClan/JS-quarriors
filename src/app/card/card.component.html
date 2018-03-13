@@ -1,0 +1,11 @@
+<div>
+  <div>{{card.cost}}</div>
+  <div>{{card.glory}}</div>
+  <div>{{card.name}}</div>
+  <div class="description">
+    <p *ngFor="let desc of card.description">{{desc}}</p>
+  </div>
+  <div>
+    <app-die-side *ngFor="let side of card.die.sides" [side]='side' [size]='200'></app-die-side>
+  </div>
+</div>

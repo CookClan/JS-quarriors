@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { DiceSideComponent } from './dice-side/dice-side.component';
+import { DieSideComponent } from './die-side/die-side.component';
+import { CardComponent } from './card/card.component';
 
 const appRoutes: Routes = [
   { path: 'quarriors', component: QuarriorsComponent }
@@ -12,7 +13,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    DiceSideComponent
+    DieSideComponent,
+    CardComponent
   ],
   imports: [
     RouterModule.forRoot(
