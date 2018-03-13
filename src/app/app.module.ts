@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { QuarriorsComponent } from '../quarriors/quarriors.component';
 import { DieSideComponent } from './die-side/die-side.component';
 import { CardComponent } from './card/card.component';
 
