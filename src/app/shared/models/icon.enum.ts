@@ -4,9 +4,11 @@
 export enum Icon {
     Quiddity1,
     Quiddity2,
-    Quiddity3,
     Draw1,
     Draw2,
     ReRoll,
-    Ready
+    Ready,
+    Quiddity3OrReRoll,
+    Quiddity1AndDraw1,
+    ReRollAndDraw1
 }
