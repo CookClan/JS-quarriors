@@ -11,5 +11,21 @@ export class DieSide {
         public attack: number = 0,
         public defense: number = 0,
         public burst: number = 0
+        
     ) {}
+    get color(){
+    	if (this.die){
+	  return this.die.color;
+	}		
+	else{
+	  return 'black';
+	}
+    }
+	get backColor(){
+	if (this.die){
+	  return this.die.backColor;
+	} else {
+	  return 'white';
+	}
+    }
 }
