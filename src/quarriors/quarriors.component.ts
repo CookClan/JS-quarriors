@@ -7,5 +7,5 @@ import { DieSide } from '../app/shared/models/die-side';
 })
 export class QuarriorsComponent{
   title = 'quarriors';
-  side = new DieSide(1,2,1,2,2);
+  side = new DieSide(0,2,1,2,2);
 }

@@ -19,11 +19,6 @@ describe('DieSideComponent Assistant', () => {
     fixture = TestBed.createComponent(DieSideComponent);
     component = fixture.componentInstance;
     component.side = new DieSide(0, 0, 0, 0, Icon.Quiddity1);
-    component.side.attack = 1;
-    component.side.burst = 2;
-    component.side.defense = 4;
-    component.side.icon = Icon.Ready;
-    component.side.level = 1;
     component.side.die = new Die([component.side,
       component.side,
       component.side, component.side, component.side, component.side], '<g transform="translate(25,25) scale(2)"> \

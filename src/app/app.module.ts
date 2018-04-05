@@ -14,6 +14,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    QuarriorsComponent,
     DieSideComponent,
     CardComponent
   ],
