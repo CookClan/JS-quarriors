@@ -18,7 +18,7 @@ describe('DieSideComponent Assistant', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DieSideComponent);
     component = fixture.componentInstance;
-    component.side = new DieSide(0, 0, 0, 0, Icon.Quiddity1);
+    component.side = new DieSide(Icon.Quiddity1, 2, 1, 1, 4);
     component.side.die = new Die([component.side,
       component.side,
       component.side, component.side, component.side, component.side], '<g transform="translate(25,25) scale(2)"> \

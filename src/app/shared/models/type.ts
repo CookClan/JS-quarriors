@@ -5,11 +5,12 @@ import { Icon } from './icon.enum';
 */
 export class Type {
     private intAbilities: string[];
+
     constructor(private intDie: Die,
         private baseName: string,
         private typeName: string,
         private intCost: number,
-        private intGlory: number,
+        private intGlory: number = 0,
         intAbilities: string[],
         private nameIsSufix: boolean = false,
         private rawDescription: string = ''
