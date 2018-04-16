@@ -4,13 +4,12 @@ import { Wilds } from '../models/wilds';
 @Injectable()
 export class GameServiceService {
 
-  constructor() { 
+  constructor() { }
 
-  }
-
-  function createWilds() {
-    this.wilds = Wilds();
-    return wilds;
-  }
   private wilds: Wilds;
+  createWilds() {
+    this.wilds = new Wilds();
+    return this.wilds;
+  }
+
 }
