@@ -1,0 +1,38 @@
+:host > div{
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: var(--die-size);
+    height: var(--die-size);
+    border-radius: 5px;
+    > div{
+        text-align: center;
+        vertical-align: middle;
+        line-height: calc(var(--die-size) / 3);
+        &.level{
+            grid-column: 1;
+            grid-row: 1;
+        }
+        &.attack{
+            grid-column: 3;
+            grid-row: 1;
+        }
+        &.defense{
+            grid-column: 3;
+            grid-row: 3;
+        }
+        &.burst{
+            grid-column: 1;
+            grid-row: 3;
+            writing-mode: vertical-rl;
+        }        
+        &.icon{
+            line-height: var(--die-size);
+            grid-column: 1 / 4;
+            grid-row: 1 / 4;
+            background-size:80%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

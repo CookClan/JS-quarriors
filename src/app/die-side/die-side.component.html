@@ -1,0 +1,7 @@
+<div [ngStyle]="style" [style.color]="side.color" [style.fill]="side.backColor" [style.background-color]="side.backColor">
+  <div class="icon" [innerHtml]="background"></div>
+  <div class="level" *ngIf="side.level">{{side.level}}</div>
+  <div class="attack" *ngIf="side.attack !== 0">{{side.attack?side.attack:side.attack===null?'?':''}}</div>
+  <div class="defense" *ngIf="side.defense !== 0">{{side.defense?side.defense:side.defense===null?'?':''}}</div>
+  <div class="burst" *ngIf="side.burst">{{bursts}}</div>
+</div>

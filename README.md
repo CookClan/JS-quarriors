@@ -1,5 +1,5 @@
 # JSQuarriors
-
+A JS barebones implementation of the dice building game.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.1.
 
 ## Development server
