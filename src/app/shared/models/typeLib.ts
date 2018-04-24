@@ -108,13 +108,15 @@ export function getRandom(pool: Type[], count: number): [Type, number][] {
     if (count < 1 || Math.floor(count) !== count) {
         throw new Error('Invalid count');
     }
-    if (pool.length < count) {
-        throw new Error('Not Enough canidates');
-    }
     shuffle(pool);
-    const ret: [Type, number][] = [[pool.pop(), 5]];
-    count--;
-    while (count > 0) {
+    const ret: [Type, number][] = [];
+    while (count > 0) {      
+        if (pool.length < count) {
+          if(ret.Length  > 0)
+            throw new Error('Ran out of canidates');
+          else
+            throw new Error('Not enough canidates');
+        }
         const canidate = pool.pop();
         let valid = true;
         for (const card of ret) {
@@ -126,12 +128,6 @@ export function getRandom(pool: Type[], count: number): [Type, number][] {
         if (valid) {
             ret.push([canidate, 5]);
             count--;
-            if (count === 0) {
-                break;
-            }
-        }
-        if (pool.length < count) {
-            throw new Error('Ran out of canidates');
         }
     }
     return ret;
