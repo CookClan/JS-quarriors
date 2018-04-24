@@ -13,5 +13,5 @@ export class Wilds {
       this.wilds.concat(TypeLib.getRandomType(sectionName, sectionCount));
     }
   } 
-  private wilds: [Type, number][];
+  private wilds: [Type, number][] = [];
 }
