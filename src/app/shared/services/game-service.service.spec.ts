@@ -13,7 +13,7 @@ describe('GameServiceService', () => {
     expect(service).toBeTruthy();
   }));
   it('should create the basic wilds', inject([GameServiceService], (service: GameServiceService) => {
-    let Wilds = service.createWilds();
-    expect(Wilds).toBeTruthy();
+    const wilds = service.createWilds();
+    expect(wilds).toBeTruthy();
   }));
 });
