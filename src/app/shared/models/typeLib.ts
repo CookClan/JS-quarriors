@@ -89,7 +89,38 @@ const spells: Type[] = [
         'Cast this spell to Gain +3 Glory.'
     ], true),
 ];
-const creatures: Type[] = [];
+const creatures: Type[] = [
+    [
+        new Type(DICE.get('Deathdealer'), 'Deathdealer', '', 3, 2, ['When Deathdealer scores, you may trade Deathdealer for one die from any other player\'s Used Pile'])
+    ],
+    [
+        new Type(DICE.get('Defender of the Pale'), 'Defender of the Pale', '', 5, 2, ['When Defender of the Pale scores, you earn 1 additional Glory for each other Creature that scores this turn'])
+    ],
+    [
+        new Type(DICE.get('Devotee of the Holy Query'), 'Devotee of the Holy Query', '', 3, 2, ['Devotee of the Holy Query gains +2 defense'])
+    ],
+    [
+        new Type(DICE.get('Ghostly Spirit'), 'Ghostly Spirit', '', 3, 2, ['Place holder'])
+    ],
+    [
+        new Type(DICE.get('Primordial Ooze'), 'Primordial Ooze', '', 3, 2, ['Place holder'])
+    ],
+    [
+        new Type(DICE.get('Quake Dragon'), 'Quake Dragon', '', 3, 2, ['Place holder'])
+    ],
+    [
+        new Type(DICE.get('Questing Wizard'), 'Questing Wizard', '', 3, 2, ['Place holder'])
+    ],
+    [
+        new Type(DICE.get('Scavenging Goblin'), 'Scavenging Goblin', '', 3, 2, ['Place holder'])
+    ],
+    [
+        new Type(DICE.get('Warrior of the Quay'), 'Warrior of the Quay', '', 3, 2, ['Place holder'])
+    ],
+    [
+        new Type(DICE.get('Witching Hag'), 'Witching Hag', '', 3, 2, ['Place holder'])
+    ]
+];
 
 export function getRandomType(section: string, count: number): [Type, number][] {
     console.log(section);
