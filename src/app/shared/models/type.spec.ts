@@ -12,9 +12,9 @@ describe('TypeModel', () => {
                 q1,
                 q2,
                 q2,
-                new DieSide(Icon.Ready, 1, 2, 5),
-                new DieSide(Icon.Ready, 2, 3, 6),
-                new DieSide(Icon.Ready, 3, 4, 8, 2),
+                new DieSide(Icon.Ready, 0, 1, 2, 5),
+                new DieSide(Icon.Ready, 0, 2, 3, 6),
+                new DieSide(Icon.Ready, 2, 3, 4, 8),
             ],
         '', 'red', 'red'),
         'Questing Wizard',
@@ -142,7 +142,7 @@ describe('TypeModel Defender of the Pale', () => {
     beforeEach(() => {
         model = new Type(
             new Die(
-                [q1, q2, q2, new DieSide(Icon.Ready, 1, 1, 5, 1),
+                [q1, q2, q2, new DieSide(Icon.Ready, 1, 5, 1, 1),
                     new DieSide(Icon.Ready, 2, 2, 6, 1),
                     new DieSide(Icon.Ready, 3, 2, 8, 2)],
                 '',
@@ -168,7 +168,7 @@ describe('TypeModel Assistant', () => {
     beforeEach(() => {
         model = new Type(
             new Die(
-                [q1, q1, q1, new DieSide(Icon.ReRoll, 0, 0, 0, 1),
+                [q1, q1, q1, new DieSide(Icon.ReRoll, 1),
                     new DieSide(Icon.Ready, 1, 1, 2),
                     new DieSide(Icon.Ready, 1, 1, 2)],
                 '',

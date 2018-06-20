@@ -26,8 +26,8 @@ describe('CardComponent', () => {
         new DieSide(Icon.Quiddity1),
         new DieSide(Icon.Quiddity2),
         new DieSide(Icon.Quiddity2, 0, 0, 0, 1),
-        new DieSide(Icon.Ready, 1, 2, 5),
-        new DieSide(Icon.Ready, 2, 3, 6),
+        new DieSide(Icon.Ready, 1, 2, 5, 0),
+        new DieSide(Icon.Ready, 2, 3, 6, 0),
         new DieSide(Icon.Ready, 3, 4, 8, 2),
     ],
     `<g transform="translate(20,20) scale(0.1)">
