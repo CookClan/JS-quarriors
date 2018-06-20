@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { DieSideComponent } from './die-side.component';
 import { DieSide } from '../shared/models/die-side';
 import { Die } from '../shared/models/die';
@@ -11,7 +11,8 @@ describe('DieSideComponent Assistant', () => {
   let compiled: any;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DieSideComponent ]
+      declarations: [ DieSideComponent ],
+      imports: [ RouterTestingModule ]
     })
     .compileComponents();
   }));
