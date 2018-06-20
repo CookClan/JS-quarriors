@@ -112,7 +112,7 @@ export function getRandom(pool: Type[], count: number): [Type, number][] {
     const ret: [Type, number][] = [];
     while (count > 0) {
         if (pool.length < count) {
-          if (ret.Length > 0) {
+          if (ret.length > 0) {
             throw new Error('Ran out of canidates');
           } else {
             throw new Error('Not enough canidates');
