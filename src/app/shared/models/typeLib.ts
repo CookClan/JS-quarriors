@@ -110,12 +110,13 @@ export function getRandom(pool: Type[], count: number): [Type, number][] {
     }
     shuffle(pool);
     const ret: [Type, number][] = [];
-    while (count > 0) {      
+    while (count > 0) {
         if (pool.length < count) {
-          if(ret.Length  > 0)
+          if (ret.Length > 0) {
             throw new Error('Ran out of canidates');
-          else
+          } else {
             throw new Error('Not enough canidates');
+          }
         }
         const canidate = pool.pop();
         let valid = true;
