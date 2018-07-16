@@ -1,4 +1,4 @@
-<div [ngStyle]="style" [style.color]="side.color" [style.fill]="side.backColor" [style.background-color]="side.backColor">
+<div [ngStyle]="style" [style.color]="die.color" [style.fill]="die.backColor" [style.background-color]="die.backColor" [style.border-color]="die.color">
   <div class="icon" [innerHtml]="background"></div>
   <div class="level" *ngIf="side.level">{{side.level}}</div>
   <div class="attack" *ngIf="side.attack !== 0">{{side.attack?side.attack:side.attack===null?'?':''}}</div>
