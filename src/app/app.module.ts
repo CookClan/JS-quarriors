@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { QuarriorsComponent } from '../quarriors/quarriors.component';
 import { DieSideComponent } from './die-side/die-side.component';
 import { CardComponent } from './card/card.component';
+import { GameServiceService } from './shared/services/game-service.service';
 
 const appRoutes: Routes = [
-  { path: 'quarriors', component: QuarriorsComponent }
+  { path: 'game', component: QuarriorsComponent, runGuardsAndResolvers: 'always' }
 ];
 
 @NgModule({
@@ -20,10 +21,11 @@ const appRoutes: Routes = [
   ],
   imports: [
     RouterModule.forRoot(
-      appRoutes),
+      appRoutes, {onSameUrlNavigation: 'reload'}),
     BrowserModule
   ],
-  providers: [],
+  exports: [RouterModule],
+  providers: [GameServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,8 +2,6 @@ import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing'
 import { RouterTestingModule } from '@angular/router/testing';
 import { DieSideComponent } from './die-side.component';
 import { DieSide } from '../shared/models/die-side';
-import { Die } from '../shared/models/die';
-import { Icon } from '../shared/models/icon.enum';
 
 describe('DieSideComponent Assistant', () => {
   let component: DieSideComponent;
@@ -63,14 +61,14 @@ describe('DieSideComponent Assistant', () => {
   }));
   it('should have a background of red', async(() => {
     component.side = new DieSide(0);
-    component.side.die = new Die(Array(6).fill(component.side), '', 'red', 'blue');
+    component.die.backColor = 'red';
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('div').style.backgroundColor).toEqual('red');
   }));
   it('should have a text color of blue', async(() => {
     component.side = new DieSide(0);
-    component.side.die = new Die(Array(6).fill(component.side), '', 'red', 'blue');
+    component.die.color = 'blue';
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('div').style.color).toEqual('blue');

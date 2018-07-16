@@ -1,11 +1,11 @@
 <div>
-  <div>{{card.cost}}</div>
-  <div>{{card.glory}}</div>
-  <div>{{card.name}}</div>
-  <div class="description">
+  <div style="background-color:black;color:white;">Cost {{card.cost}}</div>
+  <div *ngIf="card.glory" style="background-color:black;color:white;">{{card.glory}} Glory</div>
+  <div style="background-color:black;color:white;">{{card.name}}</div>
+  <div class="description" style="background-color: lightyellow;">
     <p *ngFor="let desc of card.description">{{desc}}</p>
   </div>
-  <div>
-    <app-die-side *ngFor="let side of card.die.sides" [side]='side' [size]='200'></app-die-side>
+  <div style="background-color:black;padding:5px;display:inline-block;border-radius:5px;">
+    <app-die-side *ngFor="let side of card.die.sides" [side]='side' [size]='50' [die]="card.die"></app-die-side>
   </div>
 </div>

@@ -110,9 +110,9 @@ export function getRandomType(section: string, count: number): [Type, number][] 
     if (section === 'Basic') {
         return basics;
     } else if (section === 'Spell') {
-        return getRandom(spells.splice(0), count);
+        return getRandom(spells.slice(0), count);
     } else if (section === 'Creature') {
-        return getRandom(creatures.splice(0), count);
+        return getRandom(creatures.slice(0), count);
     } else {
         throw new Error(`Did not recognize section name ${section}`);
     }

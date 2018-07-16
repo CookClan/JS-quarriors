@@ -6,10 +6,6 @@
 </div>
 
 
-<app-die-side [side] = "side" [size] = "200" >
-
-
-
-</app-die-side>
+<app-card *ngFor="let card of this.wilds" [card]="card"></app-card>
 
 

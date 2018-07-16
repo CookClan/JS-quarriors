@@ -2,6 +2,8 @@
     display: inline-grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    border-width:1px;
+    border-style: solid;
     width: var(--die-size);
     height: var(--die-size);
     border-radius: 5px;

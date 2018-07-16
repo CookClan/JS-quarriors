@@ -1,6 +1,5 @@
 import { DieSide } from './die-side';
 import { error } from 'util';
-import { Type } from './type';
 /**
  * Holds the data about a Die
 */
@@ -18,8 +17,5 @@ export class Die {
             throw new error('dice must have six and only six sides');
         }
         this.intSides = value.slice();
-        this.intSides.forEach(side => {
-            side.die = this;
-        });
     }
 }

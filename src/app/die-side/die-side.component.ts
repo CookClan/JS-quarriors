@@ -2,6 +2,7 @@ import { Component, OnInit, Renderer2, ElementRef, Input } from '@angular/core';
 import { DieSide } from '../shared/models/die-side';
 import { Icon } from '../shared/models/icon.enum';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Die } from '../shared/models/die';
 const baseDraw = `<path d="M70.0344238,60.3176727c0,5.5483322-2.3381805,10.9421844-6.584095,15.1880188
 c-5.3926468,5.3923264-13.3666,8.4855728-21.877224,8.4855728c-6.8757172,0-16.7080269-2.8987808-25.0860882-10.1110001
 c-1.0973501-0.9447937-2.5315247-1.5250626-4.0926399-1.5250626c-3.4617872,0-6.2676687,2.8070831-6.2676687,6.2681427
@@ -76,11 +77,12 @@ const ICON_SVG = new Map<Icon, string>(
 export class DieSideComponent implements OnInit {
   @Input() public side: DieSide;
   @Input() public size: number;
+  @Input() public die: Die = new Die(Array(6).fill(new DieSide(0)), '', 'white', 'black');
 constructor(private sanitizer: DomSanitizer, private renderer: Renderer2, private el: ElementRef) {}
   get background() {
     let svg: string;
     if (this.side.icon === Icon.Ready) {
-      svg = this.side.die.readyIcon;
+      svg = this.die.readyIcon;
     } else {
       svg = ICON_SVG.get(this.side.icon);
     }
